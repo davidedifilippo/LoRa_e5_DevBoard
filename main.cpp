@@ -134,7 +134,7 @@ void loop(void)
     float humi = 0;
  
     temp = random(0,100);
-    humi = 71;
+    humi = random(0,100);
  
     Serial.print("Humidity: ");
     Serial.print(humi);
@@ -165,7 +165,8 @@ void loop(void)
         else
         {
             char cmd[128];
-            sprintf(cmd, "AT+MSG=\"%d\"\r\n", (int)temp);
+           
+            sprintf(cmd, "AT+MSG=\"%d-%d\"\r\n", (int)temp, int(humi));
             ret = at_send_check_response("Done", 5000, cmd);
             if (ret)
             {
