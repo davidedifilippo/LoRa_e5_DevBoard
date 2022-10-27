@@ -111,7 +111,7 @@ void setup(){
         at_send_check_response("+MODE: LWOTAA", 1000, "AT+MODE=LWOTAA\r\n");
         at_send_check_response("+DR: EU868", 1000, "AT+DR=EU868\r\n");
         at_send_check_response("+CH: NUM", 1000, "AT+CH=NUM,0-2\r\n");
-        at_send_check_response("+KEY: APPKEY", 1000, "AT+KEY=APPKEY,\"21417788BF9AC55B0E1F704593CDC050\"\r\n");
+        at_send_check_response("+KEY: APPKEY", 1000, "AT+KEY=APPKEY,\"                    \"\r\n");
         at_send_check_response("+CLASS: C", 1000, "AT+CLASS=A\r\n");
         at_send_check_response("+PORT: 8", 1000, "AT+PORT=8\r\n");
         delay(200);
